@@ -1,0 +1,4 @@
+<import src="../../../componet/movie/movie-template.wxml" />
+<template name="filmGrid">
+    <template is="movie" />
+</template>

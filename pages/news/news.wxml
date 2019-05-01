@@ -1,0 +1,18 @@
+<!-- 注册模板模板的引用 -->
+<import src='./news-item/news-item-template.wxml' /> 
+
+<view class="news-contener">
+    <!-- swiper 轮播图小程序插件 -->
+    <swiper autoplay='true' interval="3000" indicator-dots='true'>
+        <swiper-item catch:tap="onclickBannerTo" data-bannerIndex="{{index}}" wx:for="{{bannerUrl}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <image class="new-banner" src='{{item}}'></image>
+        </swiper-item>
+    </swiper>
+    <view wx:for="{{newsData}}" wx:for-item="item"  wx:key="newsData"  wx:for-index="index" class='news-text-contener'>
+        <!-- 展示注册的模板,is="template的name值", data="是传入的数据" -->
+        <view catch:tap="onNewsDetailTo" data-postid="{{item.postId}}" data-index="{{index}}">
+            <template is="news-list" data="{{...item}}" />
+        </view>
+    </view>
+</view>
+

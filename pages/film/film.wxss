@@ -1,0 +1,43 @@
+/* pages/film/film.wxss */
+@import "../../componet/movie/movie-template.wxss";
+.film {
+    overflow: scroll;
+    background-color: white;
+}
+.film > film-box> .film-tmp {
+    height: 50rpx;
+    width: 100%;
+    background: #ccc;
+}
+.film > .textInput {
+    position: relative;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80rpx;
+    width: 100%;
+}
+.textInput > icon {
+    margin: 0 10rpx;
+}
+.textInput > input {
+    margin-left: 10rpx;
+    width: 620rpx;
+}
+.textInput > image {
+    position: absolute;
+    top: 50%;
+    right: 10rpx;
+    height: 40rpx;
+    width: 40rpx;
+    margin-top: -20rpx;
+    z-index: 99;
+}
+.searchFilm {
+    position: absolute;
+    top: 80rpx;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+}

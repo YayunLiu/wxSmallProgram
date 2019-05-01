@@ -1,0 +1,8 @@
+/* pages/film/filmMore/filmMore.wxss */
+@import '../../../componet/movie/movie-template.wxss';
+.filmMore {
+    /* height: 1300rpx; */
+    overflow: scroll;
+    background-color: white;
+}
+.filmMore::-webkit-scrollbar {display:none}

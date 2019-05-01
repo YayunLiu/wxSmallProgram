@@ -1,0 +1,21 @@
+<!--pages/film/film.wxml-->
+<import src="../../componet/movie/movie-template.wxml" />
+<view class='film'>
+    <view class="textInput">
+        <icon type="search" size="18" color="#405f80"></icon>
+        <input value="{{searchText}}" type="text" placeholder='请输入需要查询的影片' maxlength="100" bindfocus="onBindFocus" bindblur='bindblur'></input>
+        <image wx:if="{{searchFilm}}" src="../../images/icon/xx.png" catch:tap='hideSearchFilm'></image>
+    </view>
+    <view class="film-box" wx:if="{{filmBox}}">
+        <template is="movie" data="{{...hotFilmData}}"/>
+        <view class='film-tmp'></view>
+        <template is="movie" data="{{...soonFilmData}}"/>
+        <view class='film-tmp'></view>
+        <template is="movie" data="{{...top250Data}}"/>
+    </view>
+</view>
+
+<!-- 搜索查询电影浮动框 -->
+<view class="searchFilm" wx:if="{{searchFilm}}">
+    <template is="movie" data="{{...searchData}}"/>
+</view>

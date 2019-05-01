@@ -1,0 +1,11 @@
+<!-- wxml 是用来编写页面的结构 -->
+<!-- view 类似于div容器 -->
+<view class='container'>
+    <image bind:tap="onimageTo" class='user-avter' src='{{userData.avatarUrl}}'></image>
+    <text class='user-name'>hellow, {{userData.nickName || '客官'}}</text>
+    <view class='.moto-contenter'>
+        <!-- <text >开启小程序之旅</text> -->
+        <button wx:if="{{authSetting == false}}" class="moto" catch:tap='onTap'>获取授权</button>
+        <button wx:if="{{authSetting == true}}" class="moto" catch:tap='onSwitchTab'>进入小程序</button>
+    </view>
+</view>

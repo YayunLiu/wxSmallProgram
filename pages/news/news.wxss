@@ -1,0 +1,46 @@
+/* 引用模板的样式 */
+@import "./news-item/news-item-template.wxss";
+/* pages/news/news.wxss */
+.news-contener {
+    overflow: scroll;
+    width: 100%;
+    background-color: white;
+}
+swiper {
+    overflow: hidden;
+    width: 100%;
+    height: 500rpx;
+}
+swiper-item {
+    height: 100%;
+    width: 100%;
+}
+.new-banner {
+    width: 100%;
+    height: 100%;
+}
+.news-text-contener {
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx 0 40rpx 0;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10rpx;
+}
+.news-list-title {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10rpx 10rpx;
+}
+.news-list-image {
+    width: 100%;
+    height: 340rpx;
+    margin-bottom: 15rpx;
+}
+.news-list-text {
+    font-size: 28rpx;
+    color: #333;
+    margin: 0 20rpx 20rpx;
+}
+.news-contener::-webkit-scrollbar {display:none}

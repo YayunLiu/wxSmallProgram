@@ -1,0 +1,5 @@
+<!--pages/wxtest/wxtest.wxml-->
+<view>
+    <button style='height:200rpx;100rpx;margin-bottom: 35rpx;' catch:tap='onChooseAddress'>获取收获地址</button>
+    <button style='height:200rpx;100rpx;margin-bottom: 35rpx;' catch:tap='onLogin'>用户登录</button>
+</view>

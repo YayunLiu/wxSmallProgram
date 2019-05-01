@@ -1,0 +1,32 @@
+.toast{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.toast > view {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 150rpx;
+    width: 300rpx;
+    background: black;
+    opacity: 0.8;
+    margin-top: -75rpx;
+    margin-left: -150rpx; 
+    border-radius:40rpx; 
+}
+.toast > text {
+    width: 300rpx;
+    font: 30rpx;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150rpx;
+    margin-top: -15rpx;
+    color: white;
+    text-align: center;
+    margin-top: -70rpx;
+}

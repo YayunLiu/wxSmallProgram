@@ -1,0 +1,33 @@
+<import src="../../../componet/toast/toast-template.wxml" />
+<!--pages/news/news-detail/news-detail.wxml-->
+<view class='detail-contenner'>
+    <view class='detail-image'>
+        <image class='detail-image-banner' 
+        src='{{detailData.imageBannerUrl}}'></image>
+        <image class='detail-image-audio detail-image-audio-star' 
+        wx:if="{{music}}" src='../../../images/music/music-start.png' 
+        catch:tap="onMusic"></image>
+        <image class='detail-image-audio' 
+        wx:else="{{music}}" src='../../../images/music/music-stop.png' 
+        catch:tap="onMusic"></image>
+    </view>
+    <view class='detail-text'>
+        <view class='detail-text-head'>
+            <image src='{{detailData.imageHeaderurl}}'></image>
+            <text>{{detailData.author}}</text>
+            <text>发表于</text>
+            <text>{{detailData.timer}}</text>
+        </view>
+        <text class="detail-text-title">
+            {{detailData.title}}
+        </text>
+        <view class="detail-text-image">
+            <image catch:tap="onshowActionSheet" src='{{shareUrl}}'></image>
+            <image catch:tap="onCllectionTap" src='{{collectionUrl}}'></image>
+        </view>
+        <text class="detail-text-text">
+            {{detailData.text}}
+        </text>
+    </view>
+    <template is='toast' data="{{...toastObj}}"/>
+</view>

@@ -1,0 +1,122 @@
+/* pages/film/filmDetail/filmDetail.wxss */
+@import "../../../componet/start/start-template.wxss";
+.filmDetail {
+    font-size: 26rpx;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.film-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300rpx;
+}
+.film-title > .title {
+    margin: 40rpx 0 0 35rpx;
+    color: white;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.film-title > .location {
+    margin: 40rpx 0 0 35rpx;
+    color: white;
+    font-size:30rpx;
+}
+.film-title > .film-title-num {
+    display: flex;
+    flex-direction: row;
+    margin: 50rpx 0 0 35rpx;
+    color: #3a3939
+}
+.film-title-num > text {
+    margin-right: 20rpx;
+}
+.film-title-num > .like {
+    color: red;
+}
+.film-title > .filmImage {
+position: absolute;
+right: 30rpx;
+bottom: -80rpx;
+height: 250rpx;
+width: 200rpx;
+z-index: 99;
+}
+.film-title > .filmBackground {
+    filter:blur(10rpx);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.filmIntroduce {
+    border-bottom: 1px solid #c3c3c3;
+    /* padding: 40rpx 35rpx 0 35rpx; */
+    display: flex;
+    flex-direction: column;
+}
+.filmIntroduce > .title {
+    padding: 40rpx 0 0 35rpx; 
+    font-size: 34rpx;
+}
+.filmIntroduce > .introduceBox {
+    border-bottom: 1px solid #c3c3c3;
+    padding: 35rpx 35rpx 60rpx 35rpx;
+    margin-top: 40rpx; 
+    margin-bottom: 60rpx; 
+}
+.introduceBox > view {
+    margin-top: 15rpx;
+}
+.introduceBox > view > .introduceBox-title {
+    color: #c3c3c3;
+    margin-right: 30rpx;
+}
+.introduceText {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35rpx 60rpx 35rpx;
+}
+.introduceBox-text {
+    height: 26rpx;
+    width: 200rpx!important;
+}
+.introduceText > .introduceTextTitle {
+    color: #c3c3c3;
+}
+.introduceText > .introduceTextText {
+    margin-top: 20rpx;
+    letter-spacing: 4rpx;
+}
+
+.filmImageFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 45rpx;
+    margin-bottom:35rpx; 
+}
+.filmImageFooter > text {
+    color: #c3c3c3;
+    margin-bottom: 35rpx;
+    padding-left: 35rpx;
+}
+.filmImageFooter > .filmImageFooterScroll {
+    
+}
+.filmImageFooter > .filmImageFooterScroll > view {
+    
+}
+/* .filmImageFooter > scroll-view > view > image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 350rpx;
+    width: 230rpx;
+} */

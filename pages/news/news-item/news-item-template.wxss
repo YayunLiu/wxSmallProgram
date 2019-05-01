@@ -1,0 +1,34 @@
+
+.news-list-top {
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx 0 20rpx 0;
+    align-items: center;
+}
+.news-list-top > image {
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 30rpx;
+    vertical-align: middle;
+}
+.news-list-top > text {
+    margin-left: 20rpx;
+    font-size: 26rpx;
+}
+/* 
+* 新闻 下面的关注
+ */
+.news-list-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.news-list-footer > image {
+    margin-left: 15rpx;
+    height: 35rpx;
+    width: 35rpx;
+}
+.news-list-footer > text {
+    margin-left: 15rpx;
+    font-size: 26rpx;
+}

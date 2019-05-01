@@ -1,0 +1,20 @@
+<import src="../start/start-template.wxml" />
+<template name="movie">
+    <view class="movie-template">
+        <view class='movie-title'>
+            <text>
+                {{title}}
+            </text>
+            <text wx:if="{{title!='搜索' && page!='主页'}}" catch:tap="onFilmMoreTo" data-title="{{title}}">
+            更多   〉
+            </text>
+        </view>
+        <view class='movie-list'>
+            <view class='movie-list-box' wx:for="{{detail}}" wx:for-item="item" wx:for-index="index" wx:key="item" catch:tap='onFilmDetail' data-id="{{item.id}}">
+                <image src="{{item.images.large}}"></image>
+                <text>{{item.original_title}}</text>
+                <template is="start" data="{{...item.rating}}"/>
+            </view>
+        </view>
+    </view>
+</template>

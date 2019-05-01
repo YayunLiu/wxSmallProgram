@@ -1,0 +1,39 @@
+.start-template {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35rpx;
+    width: 100%;
+}
+.start-template > image {
+    height: 17rpx;
+    width: 17rpx;
+    margin-left: 3rpx; 
+}
+.start-template > .start-box {
+    overflow: hidden;
+    position: relative;
+    width: 100rpx;
+    height: 50rpx;
+}
+.start-box > view {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 99;
+}
+.start-box-star {
+    z-index: 100;
+    overflow: hidden;
+}
+.start-box > view > image {
+    height: 17rpx;
+    width: 17rpx;
+    margin-left: 3rpx;
+}
+.start-template > text{
+    margin-left: 15rpx;
+    font-size: 30rpx;
+    margin-top: -35rpx;
+}

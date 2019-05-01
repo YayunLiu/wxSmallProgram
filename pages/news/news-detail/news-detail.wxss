@@ -1,0 +1,115 @@
+@import '../../../componet/toast/toast-template.wxss';
+
+/* pages/news/news-detail/news-detail.wxss */
+
+.detail-contenner {
+    overflow: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.detail-contenner::-webkit-scrollbar {
+    display: none;
+}
+
+.detail-image {
+    position: relative;
+    width: 100%;
+    height: 380rpx;
+}
+
+.detail-image > .detail-image-banner {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-image > .detail-image-audio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    height: 100rpx;
+    width: 100rpx;
+    margin-left: -50rpx;
+    margin-top: -50rpx;
+}
+.detail-image-audio-star {
+    animation: que 4s linear infinite;
+}
+@keyframes que {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 
+* 文章区域
+ */
+
+.detail-text {
+    font-size: 22rpx;
+    padding: 38rpx 26rpx 0;
+}
+
+.detail-text > .detail-text-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.detail-text-head > image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.detail-text-head > text:nth-child(2) {
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #a8a4a4;
+    margin-left: 20rpx;
+}
+
+.detail-text-head > text {
+    margin-left: 20rpx;
+    color: #a8a4a4;
+}
+
+.detail-text > .detail-text-title {
+    font-weight: bold;
+    font-size: 34rpx;
+    color: #474646;
+}
+
+.detail-text > .detail-text-image {
+    height: 40rpx;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #a8a4a4;
+}
+
+.detail-text-image > image {
+    position: absolute;
+    right: 0;
+    border-radius: 40rpx;
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.detail-text-image > image:nth-child(2) {
+    position: absolute;
+    right: 100rpx;
+}
+
+.detail-text-text {
+    display: block;
+    margin-top: 35rpx;
+    letter-spacing: 2rpx;
+    font-size: 24rpx;
+}

@@ -1,0 +1,15 @@
+<template name="news-list">
+    <view class='news-list-top'>
+        <image src="/images/timg.jpg"></image>
+        <text wx:if="{{textInfo1}}">{{newsDate}}</text>
+    </view>
+    <text class='news-list-title'>{{newsTitle}}</text>
+    <image class='news-list-image' src="{{newsImageUrl}}"></image>
+    <text class='news-list-text'>{{newsText}}</text>
+    <view class='news-list-footer'>
+        <image src='../../images/icon/chat.png'></image>
+        <text>{{newsLike}}</text>
+        <image src='../../images/icon/view.png'></image>
+        <text>{{newsFont}}</text>
+    </view>
+</template>

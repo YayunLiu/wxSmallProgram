@@ -1,0 +1,7 @@
+<import src="../../../componet/movie/movie-template.wxml" />
+<scroll-view class="filmMore"
+ scroll-y="true"
+ bindscrolltolower= "scrollDown"
+ >  
+    <template is="movie" data="{{...dataList}}"/>
+</scroll-view>

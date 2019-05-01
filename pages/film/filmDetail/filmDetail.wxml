@@ -1,0 +1,57 @@
+<!--pages/film/filmDetail/filmDetail.wxml-->
+<import src="../../../componet/start/start-template.wxml" />
+
+<view class='filmDetail'>
+    <view class='film-title' catch:tap='checkImage' data-imgUrl="{{detail.images.large}}">
+        <text class="title">{{detail.title}}</text>
+        <text class="location">{{detail.countries[0]}} · {{detail.year}}</text>
+        <view class="film-title-num">
+            <text class="like">{{detail.comments_count}}</text><text>喜欢</text>
+            <text class="like">{{detail.wish_count}}</text><text>条评论</text>
+        </view>
+        <image class='filmImage' src='{{detail.images.large}}'></image>
+        <image class="filmBackground" src='{{detail.images.large}}'></image>
+    </view>
+    <view class='filmIntroduce'>
+        <text class="title">{{detail.title}}</text>
+        <view class="introduceBox">
+            <view>
+                <text class='introduceBox-title'>评分</text>
+                <text class='introduceBox-text'>
+                    <template is="start" data="{{...detail.rating}}"/>
+                </text>
+            </view>
+            <view>
+                <text class='introduceBox-title'>导演</text>
+                <text class='introduceBox-text'>{{detail.directors[0].name}}</text>
+            </view>
+            <view>
+                <text class='introduceBox-title'>演员</text>
+                <text class='introduceBox-text'>
+                    <text wx:for="{{detail.casts}}" wx:for-item="item" wx:for-index="index" wx:key="index">{{item.name}} \t / \t</text>
+                </text>
+            </view>
+            <view>
+                <text class='introduceBox-title'>类型</text>
+                <text class='introduceBox-text'>
+                    <text wx:for="{{detail.genres}}" wx:for-index="index" wx:for-item= "item" wx:key="index">{{item}}、\t</text>
+                </text>
+            </view>
+        </view>
+        <view class='introduceText'>
+            <text class='introduceTextTitle'>剧情介绍</text>
+            <text class="introduceTextText">
+            {{detail.summary}}
+            </text>
+        </view>
+    </view>
+    <view class="filmImageFooter">
+        <text>影人</text>
+        <scroll-view scroll-x="true" class='filmImageFooterScroll' style='white-space: nowrap; display: flex;'>
+        <!--  display: inline-block-->
+            <view style="background: red;height: 350rpx;width: 230rpx;display: inline-block;margin-left: 35rpx;position: relative; align-items: center;" wx:for="{{detail.casts}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+                <image style='height:100%; width:100%;' src='{{item.avatars.large}}'></image>
+            </view>
+        </scroll-view>
+    </view>
+</view>

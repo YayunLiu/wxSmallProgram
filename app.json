@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/welcome/welcome",
+        "pages/news/news",
+        "pages/news/news-detail/news-detail",
+        "pages/film/film",
+        "pages/film/filmMore/filmMore",
+        "pages/film/filmDetail/filmDetail",
+        "pages/wxtest/wxtest"
+    ],
+    "sitemapLocation": "sitemap.json",
+    "window": {
+        "navigationBarBackgroundColor": "#b3d4bd",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "小程序之旅",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/news/news",
+                "text": "新闻",
+                "iconPath": "./images/tab/yuedu.png",
+                "selectedIconPath": "./images/tab/yuedu_hl.png"
+            },
+            {
+                "pagePath": "pages/film/film",
+                "text": "电影",
+                "iconPath": "./images/tab/dianying.png",
+                "selectedIconPath": "./images/tab/dianying_hl.png"
+            }
+        ]
+    }
+}
